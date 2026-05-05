@@ -10,9 +10,10 @@ This guide provides a step-by-step walkthrough of deploying osTicket, covering e
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
+- Microsoft Azure (Virtual Machines/Computer)
+- Remote Desktop (RDP)
 - Internet Information Services (IIS)
+- MySQL & PHP Manager
 
 <h2>Operating Systems Used </h2>
 
