@@ -3,7 +3,7 @@
 </p>
 
 <h1>osTicket - System Setup & Lab Environment</h1>
-This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
+This guide provides a step-by-step walkthrough of deploying osTicket, covering everything from environment prerequisites to final server installation..<br />
 
 
 <h2>Video Demonstration</h2>
