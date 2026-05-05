@@ -6,9 +6,7 @@
 This guide provides a step-by-step walkthrough of deploying osTicket, covering everything from environment prerequisites to final server installation..<br />
 
 
-<h2>Video Demonstration</h2>
 
-- ### [YouTube: How To Install osTicket with Prerequisites](https://www.youtube.com)
 
 <h2>Environments and Technologies Used</h2>
 
