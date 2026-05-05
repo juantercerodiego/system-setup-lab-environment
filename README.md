@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://static.cartmega.com/image/cache/StoreImages/Categories/xbanner_osTicket-2560x500h.jpg.pagespeed.ic.OtUjh1MH6-.jpg" alt="osTicket logo"/>
+<img src="https://sjredwings-cdn.fxbrt.com/downloads/icons/os_ticket_sj_logo.png"/>
 </p>
 
 <h1>osTicket - System Setup & Lab Environment</h1>
