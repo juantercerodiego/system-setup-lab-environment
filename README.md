@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
+<img src="https://www.collaboration133.com/wp-content/uploads/2011/07/osticket-logo.jpg" alt="osTicket logo"/>
 </p>
 
 <h1>osTicket - System Setup & Lab Environment</h1>
