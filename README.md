@@ -21,11 +21,11 @@ This guide provides a step-by-step walkthrough of deploying osTicket, covering e
 
 <h2>List of Prerequisites</h2>
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+- Microsoft Azure Subscription: Used to host the virtual server environment.
+- Windows 10 VM: Deployed as the primary workstation and web server.
+- IIS (Internet Information Services): Enabled with CGI to host the web application.
+- PHP 7.4 & MySQL: Essential for processing application scripts and storing ticket data.
+- osTicket Files: Core application files configured within the web server directory.
 
 <h2>Installation Steps</h2>
 
