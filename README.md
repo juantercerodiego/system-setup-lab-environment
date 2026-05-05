@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://www.collaboration133.com/wp-content/uploads/2011/07/osticket-logo.jpg" alt="osTicket logo"/>
+<img src="https://static.cartmega.com/image/cache/StoreImages/Categories/xbanner_osTicket-2560x500h.jpg.pagespeed.ic.OtUjh1MH6-.jpg" alt="osTicket logo"/>
 </p>
 
 <h1>osTicket - System Setup & Lab Environment</h1>
