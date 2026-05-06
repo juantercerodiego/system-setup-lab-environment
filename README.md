@@ -31,7 +31,7 @@ This guide provides a step-by-step walkthrough of deploying osTicket, covering e
 Step 1: Setting up the Virtual Workspace
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/0df723e7-ed5d-4f29-a46b-0c282236d069" height="80%" width="80%" alt="Azure VM Setup"/>
 </p>
 <p>
 Before installing software, you need a place for it to live. Use your Microsoft Azure lab to create a Windows 10 Virtual Machine. This acts as your dedicated office server.
