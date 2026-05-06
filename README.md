@@ -40,7 +40,7 @@ Before installing software, you need a place for it to live. Use your Microsoft 
 <br />
 Step 2: Preparing the Web Server (IIS)
 <p>
-<img width="647" height="714" alt="step 2" src="https://github.com/user-attachments/assets/4b008e5f-5591-4361-aee3-465137420484" />
+<img width="647" height="487" alt="step 2" src="https://github.com/user-attachments/assets/4b008e5f-5591-4361-aee3-465137420484" />
 </p>
 <p>
 Computers don't know how to host websites by default. You have to enable Internet Information Services (IIS) in Windows Features.
