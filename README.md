@@ -52,7 +52,7 @@ Step 3: Installing the "Translators" (PHP)
 
 </p>
 <p>
-The ticketing system is written in a language called PHP. Since Windows doesn't speak PHP naturally, you have to install it and use PHP Manager to link it to the web server.
+The ticketing system is written in a language called PHP. Since Windows doesn't speak PHP naturally, you have to install it and use PHP Manager to link it to the IIS web server.
 </p>
 <br />
 Step 4: Building the Filing Cabinet (MySQL)
