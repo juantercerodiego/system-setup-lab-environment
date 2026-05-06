@@ -45,10 +45,18 @@ Step 2: Preparing the Web Server (IIS)
 Computers don't know how to host websites by default. You have to enable Internet Information Services (IIS) in Windows Features.
 </p>
 <br />
-
+Step 3: Installing the "Translators" (PHP)
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+The ticketing system is written in a language called PHP. Since Windows doesn't speak PHP naturally, you have to install it and use PHP Manager to link it to the web server.
+</p>
+<br />
+Step 2: Preparing the Web Server (IIS)
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Computers don't know how to host websites by default. You have to enable Internet Information Services (IIS) in Windows Features.
 </p>
