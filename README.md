@@ -17,7 +17,7 @@ This guide provides a step-by-step walkthrough of deploying osTicket, covering e
 
 <h2>Operating Systems Used </h2>
 
-- Windows 10</b> (21H2)
+- Windows 11 
 
 <h2>List of Prerequisites</h2>
 
