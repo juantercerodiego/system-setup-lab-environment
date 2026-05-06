@@ -48,7 +48,8 @@ Computers don't know how to host websites by default. You have to enable Interne
 <br />
 Step 3: Installing the "Translators" (PHP)
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="951" height="510" alt="step 3" src="https://github.com/user-attachments/assets/d9c3ee16-3b5d-4db7-8500-6e9c2b7b36c4" />
+
 </p>
 <p>
 The ticketing system is written in a language called PHP. Since Windows doesn't speak PHP naturally, you have to install it and use PHP Manager to link it to the web server.
