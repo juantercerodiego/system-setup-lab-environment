@@ -53,10 +53,18 @@ Step 3: Installing the "Translators" (PHP)
 The ticketing system is written in a language called PHP. Since Windows doesn't speak PHP naturally, you have to install it and use PHP Manager to link it to the web server.
 </p>
 <br />
-Step 2: Preparing the Web Server (IIS)
+Step 4: Building the Filing Cabinet (MySQL)
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Computers don't know how to host websites by default. You have to enable Internet Information Services (IIS) in Windows Features.
+Every ticket, user, and password needs a place to be stored safely. You’ll install MySQL to create a database.
+</p>
+<br />
+Step 5: Final Setup & Verification
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Once the files are in the right folder, you visit the website address in a browser to finish the install. You’ll set up your Admin account and link the database you just made.
 </p>
