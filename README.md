@@ -38,7 +38,7 @@ This guide provides a step-by-step walkthrough of deploying osTicket, covering e
 Before installing software, you need a place for it to live. Use your Microsoft Azure lab to create a Windows 10 Virtual Machine. This acts as your dedicated office server.
 </p>
 <br />
-Step 2: Preparing the Web Server (IIS)
+<h2>Step 2: Preparing the Web Server (IIS)</h2>
 <p>
 <img width="647" height="493" alt="step 2" src="https://github.com/user-attachments/assets/4b008e5f-5591-4361-aee3-465137420484" />
 </p>
@@ -46,7 +46,7 @@ Step 2: Preparing the Web Server (IIS)
 Computers don't know how to host websites by default. You have to enable Internet Information Services (IIS) in Windows Features.
 </p>
 <br />
-Step 3: Installing the "Translators" (PHP)
+<h2>Step 3: Installing the "Translators" (PHP)</h2>
 <p>
 <img width="951" height="510" alt="step 3" src="https://github.com/user-attachments/assets/d9c3ee16-3b5d-4db7-8500-6e9c2b7b36c4" />
 
@@ -55,7 +55,7 @@ Step 3: Installing the "Translators" (PHP)
 The ticketing system is written in a language called PHP. Since Windows doesn't speak PHP naturally, you have to install it and use PHP Manager to link it to the IIS web server.
 </p>
 <br />
-Step 4: Building the Filing Cabinet (MySQL)
+<h2>Step 4: Building the Filing Cabinet (MySQL)</h2>
 <p>
 <img width="980" height="598" alt="step4" src="https://github.com/user-attachments/assets/445a572f-782c-41a7-b1e7-136735e64e7f" />
 
@@ -64,7 +64,7 @@ Step 4: Building the Filing Cabinet (MySQL)
 Every help desk needs a place to save information like ticket numbers and user messages. I used a tool called HeidiSQL to create a private database named "osticket." Think of this as the digital filing cabinet where the system securely stores and organizes everything so nothing gets lost.
 </p>
 <br />
-Step 5: Final Setup & Verification
+<h2>Step 5: Final Setup & Verification</h2>
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
