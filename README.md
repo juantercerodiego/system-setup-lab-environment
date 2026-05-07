@@ -61,7 +61,7 @@ Step 4: Building the Filing Cabinet (MySQL)
 
 </p>
 <p>
-Every ticket, user, and password needs a place to be stored safely. You’ll install MySQL to create a database.
+Every help desk needs a place to save information like ticket numbers and user messages. I used a tool called HeidiSQL to create a private database named "osticket." Think of this as the digital filing cabinet where the system securely stores and organizes everything so nothing gets lost.
 </p>
 <br />
 Step 5: Final Setup & Verification
