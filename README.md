@@ -57,7 +57,8 @@ The ticketing system is written in a language called PHP. Since Windows doesn't 
 <br />
 Step 4: Building the Filing Cabinet (MySQL)
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="980" height="598" alt="step4" src="https://github.com/user-attachments/assets/445a572f-782c-41a7-b1e7-136735e64e7f" />
+
 </p>
 <p>
 Every ticket, user, and password needs a place to be stored safely. You’ll install MySQL to create a database.
