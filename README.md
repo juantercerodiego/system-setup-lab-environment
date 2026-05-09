@@ -66,7 +66,8 @@ Every help desk needs a place to save information like ticket numbers and user m
 <br />
 <h2>Step 5: Final Setup & Verification</h2>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1110" height="598" alt="step 5" src="https://github.com/user-attachments/assets/38617844-3423-422d-8c7b-501aec1c7fbe" />
+
 </p>
 <p>
 Once the files are in the right folder, you visit the website address in a browser to finish the install. You’ll set up your Admin account and link the database you just made.
