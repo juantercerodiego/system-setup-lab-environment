@@ -64,7 +64,7 @@ The ticketing system is written in a language called PHP. Since Windows doesn't 
 Every help desk needs a place to save information like ticket numbers and user messages. I used a tool called HeidiSQL to create a private database named "osticket." Think of this as the digital filing cabinet where the system securely stores and organizes everything so nothing gets lost.
 </p>
 <br />
-<h2>Step 5: Final Setup & Verification</h2>
+<h2>Step 5: (Final Install & Success)</h2>
 <p>
 <img width="1110" height="598" alt="step 5" src="https://github.com/user-attachments/assets/38617844-3423-422d-8c7b-501aec1c7fbe" />
 
