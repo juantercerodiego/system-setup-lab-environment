@@ -70,5 +70,5 @@ Every help desk needs a place to save information like ticket numbers and user m
 
 </p>
 <p>
-Once the files are in the right folder, you visit the website address in a browser to finish the install. You’ll set up your Admin account and link the database you just made.
+After getting the "engine" (PHP) and the "filing cabinet" (MySQL) ready, I finally hit the ignition. I finished the setup through my browser and landed on the success screen. This proves the help desk is officially live, working perfectly, and ready to start handling real support tickets!
 </p>
