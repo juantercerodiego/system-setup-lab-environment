@@ -13,8 +13,8 @@ This lab covers setting up the underlying web infrastructure, enabling web serve
 - **Microsoft Azure** (Virtual Machine Server Host)
 - **Remote Desktop Connection (RDP)** (Remote Server Administration)
 - **Internet Information Services (IIS)** (Windows Web Server)
-- **PHP 7.4 & PHP Manager** (Server-Side Script Processing)
-- **MySQL Database & HeidiSQL** (Backend Data Management)
+- **PHP 7.3.8 & PHP Manager** (Server-Side Script Processing)
+- **MySQL Database 5.5.62 & HeidiSQL** (Backend Data Management)
 - **Web Browser** (Chrome / Edge)
 
 <h2>Languages Used</h2>
@@ -29,10 +29,10 @@ This lab covers setting up the underlying web infrastructure, enabling web serve
 <h2>List of Prerequisites</h2>
 
 - **Microsoft Azure Subscription:** Active account to host the virtual server environment.
-- **Windows Virtual Machine:** Deployed as the primary workstation and web host.
+- **Windows Virtual Machine:** Deployed as the primary workstation and web host (`osticket-vm`).
 - **IIS (Internet Information Services):** Enabled with CGI features to host web applications.
-- **PHP 7.4 & MySQL Engine:** Essential for processing PHP scripts and storing application tables.
-- **osTicket Core Files:** Extracted and configured within the web server directory (`C:\inetpub\wwwroot`).
+- **PHP 7.3.8 & MySQL Engine 5.5.62:** Essential for processing PHP scripts and storing application tables.
+- **osTicket Core Files (v1.15.8):** Extracted and configured within the web server directory (`C:\inetpub\wwwroot\osTicket`).
 
 <br />
 
@@ -42,11 +42,11 @@ This lab covers setting up the underlying web infrastructure, enabling web serve
 
 <h2>Step 1: Setting Up the Virtual Workspace</h2>
 
-Before installing web software, you need a dedicated server host environment. In Microsoft Azure, I provisioned a Windows Virtual Machine to serve as the isolated web server for hosting the help desk platform.
+Before installing web software, you need a dedicated server host environment. In Microsoft Azure, I logged into the target virtual machine (`osticket-vm`) via Remote Desktop and prepared the installation media.
 
-1. Logged into the Azure Portal and navigated to **Virtual Machines**.
-2. Created a new virtual machine using a Windows client image.
-3. Connected to the instance using **Remote Desktop Connection (RDP)** to begin server configuration.
+1. Logged into the **`osticket-vm`** using **Remote Desktop Connection (RDP)**.
+2. Downloaded `osTicket-Installation-Files.zip` and unzipped it directly onto the Desktop.
+3. Opened the `osTicket-Installation-Files` directory containing all core installation packages and dependency installers.
 
 <p align="center">
 <img width="1192" height="476" alt="Step 1 - Setting up Virtual Workspace" src="https://github.com/user-attachments/assets/1771b82f-edb9-4613-bb19-61e5321b2d88" />
@@ -72,14 +72,18 @@ Windows operating systems do not act as web servers by default. I enabled **Inte
 
 ---
 
-<h2>Step 3: Installing & Registering PHP</h2>
+<h2>Step 3: Installing Prerequisites & Registering PHP</h2>
 
-The osTicket core application is written in **PHP**. Since Windows IIS does not process PHP out of the box, I installed PHP 7.4 and used **PHP Manager for IIS** to register the interpreter path with the web server.
+The osTicket core application is written in **PHP**. Since Windows IIS does not process PHP out of the box, I installed the required IIS modules, deployed PHP 7.3.8, and registered the interpreter with IIS.
 
-1. Extracted PHP 7.4 files into `C:\PHP`.
-2. Installed PHP Manager for IIS.
-3. Opened **IIS Manager**, launched **PHP Manager**, and selected **Register new PHP version**.
-4. Pointed the registration tool directly to `C:\PHP\php-cgi.exe` and enabled required PHP extensions (such as `php_mysqli.dll` and `php_mbstring.dll`).
+1. From the `osTicket-Installation-Files` folder, installed **PHP Manager for IIS** (`PHPManagerForIIS_V1.5.0.msi`) and the **URL Rewrite Module** (`rewrite_amd64_en-US.msi`).
+2. Created directory `C:\PHP` and unzipped **PHP 7.3.8** (`php-7.3.8-nts-Win32-VC15-x86.zip`) directly into `C:\PHP`.
+3. Installed `VC_redist.x86.exe` from the installation folder.
+4. Opened **IIS Manager** as Administrator, opened **PHP Manager**, registered `C:\PHP\php-cgi.exe`, and restarted the IIS web server.
+5. In **PHP Manager**, clicked **Enable or disable an extension** and enabled:
+   - `php_imap.dll`
+   - `php_intl.dll`
+   - `php_opcache.dll`
 
 <p align="center">
 <img width="951" height="510" alt="Step 3 - Registering PHP in IIS" src="https://github.com/user-attachments/assets/d9c3ee16-3b5d-4db7-8500-6e9c2b7b36c4" />
@@ -91,11 +95,12 @@ The osTicket core application is written in **PHP**. Since Windows IIS does not 
 
 <h2>Step 4: Building the Backend Database (MySQL & HeidiSQL)</h2>
 
-Every help desk requires a relational database to store user records, department structures, and ticket history. I installed MySQL Server and used **HeidiSQL** to connect to the local database instance and create a blank target database named `osticket`.
+Every help desk requires a relational database to store user records, department structures, and ticket history. I installed MySQL Server 5.5.62 and used **HeidiSQL** to create a blank database named `osTicket`.
 
-1. Installed MySQL Database Server on the local machine.
-2. Opened **HeidiSQL** and logged in using local root database credentials.
-3. Created a new database named **`osticket`** to serve as the backend storage container for the web installer.
+1. Installed **MySQL 5.5.62** (`mysql-5.5.62-win32.msi`) using a Typical Setup.
+2. Launched the MySQL Configuration Wizard, selected **Standard Configuration**, and set the root admin account password (`root`).
+3. Installed and opened **HeidiSQL**, created a new session connecting to localhost with username `root` and password `root`.
+4. Created a brand new database named **`osTicket`**.
 
 <p align="center">
 <img width="980" height="598" alt="Step 4 - Creating Database in HeidiSQL" src="https://github.com/user-attachments/assets/445a572f-782c-41a7-b1e7-136735e64e7f" />
@@ -105,14 +110,16 @@ Every help desk requires a relational database to store user records, department
 
 ---
 
-<h2>Step 5: Final Web Installation & Success Verification</h2>
+<h2>Step 5: Deploying osTicket, Web Setup & Security Cleanup</h2>
 
-With the web server configured, PHP interpreter linked, and MySQL database provisioned, I initiated the osTicket web-based installer wizard.
+With the web server configured, PHP interpreter linked, and MySQL database provisioned, I deployed **osTicket v1.15.8**, adjusted file permissions, and completed the web installer wizard.
 
-1. Placed the osTicket `upload` directory files into `C:\inetpub\wwwroot\osTicket`.
-2. Opened a web browser and navigated to `http://localhost/osTicket/setup`.
-3. Completed the system prerequisites check, provided admin account details, and linked the database credentials created in Step 4.
-4. Completed the installer and landed on the official confirmation screen, confirming the help desk system was live and ready for deployment.
+1. Unzipped `osTicket-v1.15.8.zip`, copied the `upload` folder into `C:\inetpub\wwwroot`, and renamed `upload` to **`osTicket`**.
+2. Renamed `C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php` to `ost-config.php`.
+3. Configured security permissions on `ost-config.php` (Disabled inheritance, removed existing permissions, assigned `Everyone` -> `Full Control`).
+4. Opened browser, navigated to `http://localhost/osTicket/setup`, and linked the database (`osTicket`, user: `root`, pass: `root`).
+5. **Post-Installation Cleanup:** Deleted the installation setup folder (`C:\inetpub\wwwroot\osTicket\setup`) and reset permissions on `ost-config.php` back to **Read-Only**.
+6. Verified system deployment by accessing the end-user portal (`http://localhost/osTicket/`) and staff portal (`http://localhost/osTicket/scp/login.php`).
 
 <p align="center">
 <img width="1110" height="598" alt="Step 5 - Installation Complete Screen" src="https://github.com/user-attachments/assets/38617844-3423-422d-8c7b-501aec1c7fbe" />
