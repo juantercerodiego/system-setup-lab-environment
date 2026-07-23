@@ -48,9 +48,8 @@ Before installing web software, you need a dedicated server host environment. In
 2. Downloaded `osTicket-Installation-Files.zip` and unzipped it directly onto the Desktop.
 3. Opened the `osTicket-Installation-Files` directory containing all core installation packages and dependency installers.
 
-<p align="center">
-<img width="1192" height="476" alt="Step 1 - Setting up Virtual Workspace" src="https://github.com/user-attachments/assets/1771b82f-edb9-4613-bb19-61e5321b2d88" />
-</p>
+<img width="1192" height="476" alt="step 1 osticket" src="https://github.com/user-attachments/assets/23b7e5ea-3e0c-443d-a6d3-68d153004bcb" />
+
 
 <br />
 
@@ -64,9 +63,8 @@ Windows operating systems do not act as web servers by default. I enabled **Inte
 2. Expanded **Internet Information Services** -> **World Wide Web Services** -> **Application Development Features**.
 3. Checked **CGI**, clicked **OK**, and allowed Windows to install the required web hosting components.
 
-<p align="center">
-<img width="647" height="493" alt="Step 2 - Enabling IIS and CGI" src="https://github.com/user-attachments/assets/4b008e5f-5591-4361-aee3-465137420484" />
-</p>
+<img width="647" height="714" alt="step 2" src="https://github.com/user-attachments/assets/1d5cdccf-6a9a-486e-b101-23018a9a6f82" />
+
 
 <br />
 
@@ -85,9 +83,8 @@ The osTicket core application is written in **PHP**. Since Windows IIS does not 
    - `php_intl.dll`
    - `php_opcache.dll`
 
-<p align="center">
-<img width="951" height="510" alt="Step 3 - Registering PHP in IIS" src="https://github.com/user-attachments/assets/d9c3ee16-3b5d-4db7-8500-6e9c2b7b36c4" />
-</p>
+<img width="951" height="617" alt="step 3" src="https://github.com/user-attachments/assets/adb15174-e828-402b-b09f-549d6e22b758" />
+
 
 <br />
 
@@ -102,9 +99,8 @@ Every help desk requires a relational database to store user records, department
 3. Installed and opened **HeidiSQL**, created a new session connecting to localhost with username `root` and password `root`.
 4. Created a brand new database named **`osTicket`**.
 
-<p align="center">
-<img width="980" height="598" alt="Step 4 - Creating Database in HeidiSQL" src="https://github.com/user-attachments/assets/445a572f-782c-41a7-b1e7-136735e64e7f" />
-</p>
+<img width="980" height="598" alt="step4" src="https://github.com/user-attachments/assets/de281375-1418-4ff0-9155-2795524dd5e5" />
+
 
 <br />
 
@@ -121,6 +117,5 @@ With the web server configured, PHP interpreter linked, and MySQL database provi
 5. **Post-Installation Cleanup:** Deleted the installation setup folder (`C:\inetpub\wwwroot\osTicket\setup`) and reset permissions on `ost-config.php` back to **Read-Only**.
 6. Verified system deployment by accessing the end-user portal (`http://localhost/osTicket/`) and staff portal (`http://localhost/osTicket/scp/login.php`).
 
-<p align="center">
-<img width="1110" height="598" alt="Step 5 - Installation Complete Screen" src="https://github.com/user-attachments/assets/38617844-3423-422d-8c7b-501aec1c7fbe" />
-</p>
+<img width="1110" height="909" alt="step 5" src="https://github.com/user-attachments/assets/7736a6e7-f226-4f56-9dda-da3d88d2dc12" />
+
